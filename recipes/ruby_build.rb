@@ -1,10 +1,13 @@
 package "epel-release"
 package "gcc"
+package "gcc-c++"
 package "openssl-devel"
 package "libyaml-devel"
 package "readline-devel"
 package "zlib-devel"
 package "libffi-devel"
+package "libxml2-devel"
+package "libxslt-devel"
 package "git"
 
 RBENV_DIR = "/usr/local/rbenv"
