@@ -31,6 +31,10 @@ git "#{RBENV_DIR}/plugins/ruby-build" do
   repository "git://github.com/sstephenson/ruby-build.git"
 end
 
+directory RBENV_DIR do
+  mode "775"
+end
+
 node["rbenv"]["versions"].each do |versoin|
     execute "install ruby #{versoin}" do
       command "source #{RBENV_SCRIPT}; rbenv install #{versoin}"
